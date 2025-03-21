@@ -1,0 +1,393 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --lumon-blue: #002B49;
+  --lumon-light-blue: #E5EEF4;
+  --lumon-border: #A3B5C0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--lumon-light-blue);
+  color: var(--lumon-blue);
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 29px,
+    var(--lumon-border) 29px,
+    var(--lumon-border) 30px
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 43, 73, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: var(--lumon-blue);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: var(--lumon-blue);
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.input-container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+input {
+  padding: 0 16px;
+  height: 44px;
+  font-size: 16px;
+  border: 2px solid #002B49;
+  border-radius: 4px;
+  background-color: #E5EEF4;
+  color: #002B49;
+  width: 300px;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #003d66;
+  box-shadow: 0 0 0 3px rgba(0, 43, 73, 0.1);
+}
+
+input::placeholder {
+  color: #7a8c98;
+}
+
+button {
+  background-color: #002B49;
+  color: #E5EEF4;
+  border: none;
+  padding: 12px 24px;
+  margin: 0;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #003d66;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.update-button {
+  background-color: #002B49;
+}
+
+.print-button {
+  background-color: #003d66;
+}
+
+.badge {
+  background: white;
+  width: 350px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 43, 73, 0.1);
+  border-radius: 10px;
+  border: 1px solid var(--lumon-border);
+  display: none;
+  position: relative;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--lumon-border);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.badge.visible {
+  display: block;
+}
+
+.badge-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.badge-header::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: -30px;
+  right: -30px;
+  height: 1px;
+  background: var(--lumon-border);
+}
+
+.badge-logo {
+  height: 50px;
+}
+
+.badge-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.badge-photo-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 1px solid var(--lumon-border);
+}
+
+.badge-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-info {
+  text-align: center;
+  width: 100%;
+}
+
+.badge-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--lumon-blue);
+  letter-spacing: 1px;
+}
+
+.badge-position {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--lumon-blue);
+  padding: 0 15px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.badge-department {
+  margin: 0 auto;
+  padding: 8px 20px;
+  background-color: var(--lumon-light-blue);
+  border: 1px solid var(--lumon-border);
+  color: var(--lumon-blue);
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 80%;
+  letter-spacing: 1px;
+}
+
+.badge-footer {
+  margin-top: 25px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--lumon-border);
+}
+
+.barcode-img {
+  height: 40px;
+  opacity: 0.8;
+}
+
+.terminal {
+  margin-top: 40px;
+  background-color: #000;
+  border-radius: 4px;
+  padding: 20px;
+  color: #33ff33;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  position: relative;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--lumon-border);
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background-color: var(--lumon-blue);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.terminal-button.close {
+  background-color: #ff5f56;
+}
+
+.terminal-button.minimize {
+  background-color: #ffbd2e;
+}
+
+.terminal-button.maximize {
+  background-color: #27c93f;
+}
+
+.terminal-content {
+  margin-top: 25px;
+  line-height: 1.5;
+  font-family: 'Courier New', monospace;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media print {
+  .app::before {
+    display: none;
+  }
+
+  .input-container,
+  .terminal {
+    display: none;
+  }
+
+  .container {
+    box-shadow: none;
+    padding: 0;
+    background: none;
+  }
+
+  .badge {
+    display: block;
+    box-shadow: none;
+    border: none;
+  }
+
+  .badge::before {
+    border: none;
+  }
+}

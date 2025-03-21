@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Horizontal Lines -->
+  <g stroke="#002B49" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="10" x2="300" y2="10" />
+    <line x1="0" y1="20" x2="300" y2="20" />
+    <line x1="0" y1="80" x2="300" y2="80" />
+    <line x1="0" y1="90" x2="300" y2="90" />
+  </g>
+
+  <!-- Oval Background -->
+  <ellipse cx="150" cy="50" rx="80" ry="35" fill="#002B49"/>
+  
+  <!-- Grid Lines -->
+  <g stroke="#E5EEF4" stroke-width="1" opacity="0.2">
+    <path d="M 90,35 C 90,35 150,30 210,35" fill="none"/>
+    <path d="M 90,50 C 90,50 150,45 210,50" fill="none"/>
+    <path d="M 90,65 C 90,65 150,60 210,65" fill="none"/>
+    <path d="M 120,30 L 120,70" fill="none"/>
+    <path d="M 150,25 L 150,75" fill="none"/>
+    <path d="M 180,30 L 180,70" fill="none"/>
+  </g>
+
+  <!-- LUMON Text -->
+  <text x="150" y="60" 
+        font-family="Helvetica Neue, Arial" 
+        font-size="24" 
+        fill="#FFFFFF" 
+        text-anchor="middle" 
+        font-weight="500" 
+        letter-spacing="2">LUMON</text>
+</svg>
